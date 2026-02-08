@@ -1,4 +1,5 @@
 sdk_add_compile_options(
+-fno-lto
 -fno-jump-tables
 -fno-common
 -fms-extensions
@@ -47,11 +48,11 @@ $<$<COMPILE_LANGUAGE:CXX>:-fno-exceptions>
 )
 
 sdk_add_link_options(
+-fno-lto
 -Wl,--cref
 -Wl,--gc-sections
 -nostartfiles
 -fms-extensions
--flto
 -ffunction-sections
 -fdata-sections
 --specs=nano.specs

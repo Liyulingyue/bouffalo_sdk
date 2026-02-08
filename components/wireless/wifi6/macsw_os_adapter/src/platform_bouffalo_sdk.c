@@ -13,6 +13,7 @@
 #include <bflb_sec_trng.h>
 #include "wifi_mgmr_ext.h"
 #include "mm.h"
+#include "async_event.h"
 
 #if defined(BL616)
 #include <bl616_mfg_media.h>
@@ -130,7 +131,7 @@ static void async_event_loop_wake(void)
         wait = 0;
     }
 
-    xReturn = xTimerPendFunctionCall(async_event_handler, (void *)NULL, NULL, wait);
+    xReturn = xTimerPendFunctionCall(async_event_handler, (void *)NULL, 0, wait);
     configASSERT(xReturn == pdPASS);
 }
 

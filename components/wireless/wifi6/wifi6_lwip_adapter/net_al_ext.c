@@ -447,7 +447,7 @@ static int wifi_sta_dhcpc_start(uint8_t fhost_vif_idx)
         show_ip(fhost_vif_idx);
         PLATFORM_HOOK(prevent_sleep, PSM_EVENT_CONNECT, 0);
         if(wifi_mgmr_sta_connect_params_get() & LOW_RATE_CONNECT) {
-            wifi_mgmr_rate_config_sta(0xFFFF);
+            wifi_mgmr_rate_config(0xFFFF);
         }
     }
     return 0;

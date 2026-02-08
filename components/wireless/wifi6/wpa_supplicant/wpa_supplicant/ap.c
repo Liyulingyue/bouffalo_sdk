@@ -38,6 +38,7 @@
 #include "ap/sta_info.h"
 #include "notify.h"
 
+int hostapd_ctrl_iface_acl_enable(struct hostapd_data *hapd, const char *txtaddr);
 
 #ifdef CONFIG_WPS
 static void wpas_wps_ap_pin_timeout(void *eloop_data, void *user_ctx);

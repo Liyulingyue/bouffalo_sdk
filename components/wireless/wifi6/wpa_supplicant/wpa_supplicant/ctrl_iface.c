@@ -58,6 +58,9 @@
 #include "mesh.h"
 #include "dpp_supplicant.h"
 #include "sme.h"
+#include "ap/ctrl_iface_ap.h"
+
+int ap_ctrl_iface_acl_enable(struct wpa_supplicant *wpa_s, char *cmd);
 
 #ifdef __NetBSD__
 #include <net/if_ether.h>

@@ -15,8 +15,12 @@
  */
 
 #include <string.h>
+#include <stdio.h>
 
 #include "FreeRTOS.h"
+
+int get_time_SINCE_BOOT(uint32_t *sec, uint32_t *usec);
+#define dbg_snprintf snprintf
 #include "timers.h"
 #include "lwip/tcp.h"
 #include "lwip/udp.h"

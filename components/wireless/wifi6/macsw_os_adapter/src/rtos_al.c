@@ -134,7 +134,7 @@ int rtos_task_create(rtos_task_fct func,
     BaseType_t res;
     rtos_task_handle handle;
 
-    res = xTaskCreate(func, name, stack_depth, params, prio, &handle);
+    res = xTaskCreate(func, name, stack_depth, params, prio, (TaskHandle_t *)&handle);
 
     if (res == pdFAIL)
         return 1;

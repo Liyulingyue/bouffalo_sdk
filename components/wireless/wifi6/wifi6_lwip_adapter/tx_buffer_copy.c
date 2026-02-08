@@ -1,11 +1,14 @@
 #include "stddef.h"
 #include "assert.h"
+#include <string.h>
 #include "mac_frame.h"
+#include "macsw.h"
 #include "net_al.h"
 #include "lwip/tcpip.h"
 #include "tx_buffer_copy.h"
 
 #define bc_dbg(fmt, ...) do{}while(0)
+#define ASSERT_ERR(condition) assert(condition)
 
 #ifndef container_of
 #define container_of(ptr, type, member) ({                      \
